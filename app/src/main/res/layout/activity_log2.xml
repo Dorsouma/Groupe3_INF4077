@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    tools:context=".log2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="30dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="cursive"
+            android:gravity="center"
+            android:text="S'enregistrer"
+            android:textColor="#296BA6"
+            android:textSize="40sp" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginRight="35dp"
+            android:layout_marginBottom="20dp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Nom d'utlisateur"
+            android:inputType="textPersonName"
+            android:padding="10dp" />
+
+        <EditText
+            android:id="@+id/editTextPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginRight="35dp"
+            android:layout_marginBottom="20dp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="+ 237 600000000"
+            android:inputType="phone"
+            android:padding="10dp" />
+
+        <EditText
+            android:id="@+id/editTextTextEmailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginRight="35dp"
+            android:layout_marginBottom="20dp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="medtub237@gmail.com"
+            android:inputType="textEmailAddress"
+            android:padding="10dp" />
+
+        <EditText
+            android:id="@+id/editTextDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginRight="35dp"
+            android:layout_marginBottom="20dp"
+            android:ems="10"
+            android:hint="DD/MM/YYYY"
+            android:gravity="center"
+            android:inputType="date"
+            android:padding="10dp" />
+
+        <EditText
+            android:id="@+id/editTextTextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginRight="35dp"
+            android:layout_marginBottom="20dp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="............."
+            android:inputType="textPassword"
+            android:padding="10dp" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginRight="35dp"
+            android:layout_marginBottom="20dp"
+            android:text="S'enregistrer"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:backgroundTint="#296BA6" />
+
+    </LinearLayout>
+</RelativeLayout>
