@@ -18,7 +18,7 @@
     <EditText
         android:id="@+id/txt_message"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="wrap_content"
         android:hint="Ecrire le message"
         android:inputType="textLongMessage"
         android:gravity="top"

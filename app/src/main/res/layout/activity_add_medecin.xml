@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    tools:context=".AddMedecinActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--En tete-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:background="@drawable/background">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/logo"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="MedTub"
+                android:textSize="15sp"
+                android:textColor="#00c78c"
+                android:fontFamily="sans-serif"
+                android:textStyle="bold"/>
+
+
+        </LinearLayout>
+
+        <!--Corps-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#E2F8ED"
+            android:gravity="center"
+            android:padding="40dp">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:fontFamily="cursive"
+                android:gravity="center"
+                android:text="Ajouter un médecin"
+                android:textColor="#168e74"
+                android:textSize="40sp" />
+
+            <EditText
+                android:id="@+id/MedecinNom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="Nom"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                android:layout_marginBottom="15dp"/>
+
+            <EditText
+                android:id="@+id/MedecinPrenom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="Prénom"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                android:layout_marginBottom="15dp"/>
+
+            <EditText
+                android:id="@+id/MedecinPoste"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="Poste"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                android:layout_marginBottom="15dp"/>
+
+            <EditText
+                android:id="@+id/MedecinTelephone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="+237 6XXXXXXXX"
+                android:inputType="phone"
+                android:padding="10dp"
+                android:layout_marginBottom="15dp"/>
+
+            <EditText
+                android:id="@+id/MedecinHopital"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="Hôpital de fonction"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                android:layout_marginBottom="15dp"/>
+
+            <TextView
+                android:id="@+id/ajouterMedecin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClick"
+                android:text="Ajouter"
+                android:gravity="center"
+                android:textStyle="italic"
+                android:textColor="#E2F8ED"
+                android:textSize="25sp"
+                android:padding="7dp"
+                android:clickable="true"
+                android:background="@drawable/bg_bouton"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

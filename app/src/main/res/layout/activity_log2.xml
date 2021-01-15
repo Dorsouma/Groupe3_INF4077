@@ -10,120 +10,178 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginStart="40dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginRight="40dp"
-        android:layout_marginBottom="30dp"
-        />
+        android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center"
-        >
-
-        <TextView
-            android:id="@+id/textView2"
+        <!--En tete-->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="30dp"
-            android:fontFamily="cursive"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:background="@drawable/background">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/logo"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="MedTub"
+                android:textSize="15sp"
+                android:textColor="#00c78c"
+                android:fontFamily="sans-serif"
+                android:textStyle="bold"/>
+
+
+        </LinearLayout>
+
+        <!--Corps-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#E2F8ED"
             android:gravity="center"
-            android:text="S'enregistrer"
-            android:textColor="#296BA6"
-            android:textSize="40sp" />
+            android:padding="40dp">
 
-        <EditText
-            android:id="@+id/editTextTextPersonName"
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:fontFamily="cursive"
+                android:gravity="center"
+                android:text="Se Connecter"
+                android:textColor="#168e74"
+                android:textSize="40sp" />
+
+            <EditText
+                android:id="@+id/PersonEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:drawableLeft="@android:drawable/ic_dialog_email"
+                android:gravity="center"
+                android:hint="medtub21@gmail.com"
+                android:textSize="20sp"
+                android:inputType="textEmailAddress"
+                android:padding="10dp" />
+
+            <EditText
+                android:id="@+id/PersonPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:drawableLeft="@android:drawable/ic_lock_idle_lock"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:hint="............."
+                android:inputType="textPassword"
+                android:padding="10dp" />
+
+            <TextView
+                android:id="@+id/inscription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClick"
+                android:text="Se Connecter"
+                android:gravity="center"
+                android:textStyle="italic"
+                android:textColor="#E2F8ED"
+                android:textSize="25sp"
+                android:padding="7dp"
+                android:clickable="true"
+                android:background="@drawable/bg_bouton"/>
+
+        </LinearLayout>
+
+        <!--Pied de page-->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="35dp"
-            android:layout_marginLeft="35dp"
-            android:layout_marginEnd="35dp"
-            android:layout_marginRight="35dp"
-            android:layout_marginBottom="20dp"
-            android:ems="10"
-            android:gravity="center"
-            android:hint="Nom d'utlisateur"
-            android:inputType="textPersonName"
-            android:padding="10dp" />
+            android:orientation="horizontal"
+            android:background="@drawable/background">
 
-        <EditText
-            android:id="@+id/editTextPhone"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="35dp"
-            android:layout_marginLeft="35dp"
-            android:layout_marginEnd="35dp"
-            android:layout_marginRight="35dp"
-            android:layout_marginBottom="20dp"
-            android:ems="10"
-            android:gravity="center"
-            android:hint="+ 237 600000000"
-            android:inputType="phone"
-            android:padding="10dp" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginRight="30dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="About dev team:"
+                    android:textStyle="italic"
+                    android:textSize="10sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:layout_marginBottom="2dp"
+                    android:text="Kenmeugne Loic"
+                    android:textSize="8sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="Kwite Maurice"
+                    android:textSize="8sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="Adala Roger"
+                    android:textSize="8sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="Mahamat Dorsouma"
+                    android:textSize="8sp"/>
+            </LinearLayout>
 
-        <EditText
-            android:id="@+id/editTextTextEmailAddress"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="35dp"
-            android:layout_marginLeft="35dp"
-            android:layout_marginEnd="35dp"
-            android:layout_marginRight="35dp"
-            android:layout_marginBottom="20dp"
-            android:ems="10"
-            android:gravity="center"
-            android:hint="medtub237@gmail.com"
-            android:inputType="textEmailAddress"
-            android:padding="10dp" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="Mail"
+                    android:textStyle="italic"
+                    android:textSize="10sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:layout_marginBottom="2dp"
+                    android:text="pcgroupe1@gmail.com"
+                    android:textSize="8sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="kwitejunior@gmail.com"
+                    android:textSize="8sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="rogerbertrand360@gmail.com"
+                    android:textSize="8sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="."
+                    android:textSize="8sp"/>
+            </LinearLayout>
 
-        <EditText
-            android:id="@+id/editTextDate"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="35dp"
-            android:layout_marginLeft="35dp"
-            android:layout_marginEnd="35dp"
-            android:layout_marginRight="35dp"
-            android:layout_marginBottom="20dp"
-            android:ems="10"
-            android:hint="DD/MM/YYYY"
-            android:gravity="center"
-            android:inputType="date"
-            android:padding="10dp" />
-
-        <EditText
-            android:id="@+id/editTextTextPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="35dp"
-            android:layout_marginLeft="35dp"
-            android:layout_marginEnd="35dp"
-            android:layout_marginRight="35dp"
-            android:layout_marginBottom="20dp"
-            android:ems="10"
-            android:gravity="center"
-            android:hint="............."
-            android:inputType="textPassword"
-            android:padding="10dp" />
-
-        <Button
-            android:id="@+id/button3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="35dp"
-            android:layout_marginLeft="35dp"
-            android:layout_marginEnd="35dp"
-            android:layout_marginRight="35dp"
-            android:layout_marginBottom="20dp"
-            android:text="S'enregistrer"
-            android:textSize="18dp"
-            android:textStyle="bold"
-            app:backgroundTint="#296BA6" />
-
+        </LinearLayout>
     </LinearLayout>
 </RelativeLayout>

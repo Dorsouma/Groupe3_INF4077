@@ -1,57 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:weightSum="7"
-    android:background="#fafafa"
     tools:context=".form">
 
     <!--En tête-->
     <LinearLayout
+        android:id="@+id/entete"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_weight="1"
-        android:gravity="bottom"
-        android:background="@drawable/header_bg"
-        android:padding="12dp"
-        >
+        android:gravity="center_horizontal"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/background">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/logo"/>
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="MedTub-Accueil"
-            android:textColor="#fafafa"
-            android:textSize="30sp"
-            />
+            android:layout_marginBottom="5dp"
+            android:text="MedTub"
+            android:textSize="15sp"
+            android:textColor="#00c78c"
+            android:fontFamily="sans-serif"
+            android:textStyle="bold"/>
+
     </LinearLayout>
 
-
-    <!--Creation de la grille-->
+    <!--Corps-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="6"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        android:weightSum="3"
         android:padding="10dp"
+        android:gravity="center"
+        android:layout_below="@id/entete"
+        android:background="#E2F8ED"
         >
 
         <!--La première ligne-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:background="#E2F8ED"
             android:weightSum="2"
             android:padding="10dp"
             >
+
             <!--1er element premiere ligne-->
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardsign2"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 app:cardElevation="2dp"
                 app:cardCornerRadius="8dp"
@@ -73,7 +80,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="30dp"
                         android:text="S'inscrire"
-                        android:textAlignment="center"
+                        android:textColor="#165d91"
+                        android:textStyle="bold"
+                        android:gravity="center_horizontal"
                         />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -82,7 +91,7 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardlog2"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 app:cardElevation="2dp"
                 app:cardCornerRadius="8dp"
@@ -104,85 +113,103 @@
                         android:layout_width="match_parent"
                         android:layout_height="30dp"
                         android:text="Se connecter"
-                        android:textAlignment="center"
+                        android:textColor="#17bf66"
+                        android:textStyle="bold"
+                        android:gravity="center_horizontal"
                         />
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
 
         </LinearLayout>
-
-        <!--La deuxième ligne-->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:weightSum="2"
-            android:padding="10dp"
-            >
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardexam2"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                app:cardElevation="2dp"
-                app:cardCornerRadius="8dp"
-                android:layout_margin="12dp"
-                android:background="#fff"                >
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    >
-                    <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:src="@drawable/ic_baseline_coronavirus_24"
-                        />
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:text="Examen rapide"
-                        android:textAlignment="center"
-                        />
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardcontac2"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                app:cardElevation="2dp"
-                app:cardCornerRadius="8dp"
-                android:layout_margin="12dp"
-                android:background="#fff"                >
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    >
-                    <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:src="@drawable/ic_baseline_call_24"
-                        />
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:text="Contacter Expert"
-                        android:textAlignment="center"
-                        />
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-        </LinearLayout>
-
 
     </LinearLayout>
 
-</LinearLayout>
+    <!--Pied de page-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/background">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginRight="30dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="About dev team:"
+                android:textStyle="italic"
+                android:textSize="10sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_marginBottom="2dp"
+                android:text="Kenmeugne Loic"
+                android:textSize="8sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="Kwite Maurice"
+                android:textSize="8sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="Adala Roger"
+                android:textSize="8sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="Mahamat Dorsouma"
+                android:textSize="8sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="Mail"
+                android:textStyle="italic"
+                android:textSize="10sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_marginBottom="2dp"
+                android:text="pcgroupe1@gmail.com"
+                android:textSize="8sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="kwitejunior@gmail.com"
+                android:textSize="8sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="rogerbertrand360@gmail.com"
+                android:textSize="8sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="."
+                android:textSize="8sp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

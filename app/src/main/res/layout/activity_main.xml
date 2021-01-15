@@ -1,265 +1,352 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:weightSum="7"
-    android:background="#fafafa"
     tools:context=".MainActivity">
 
-    <!--En tête-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_weight="0.35"
-        android:gravity="bottom"
-        android:background="@drawable/header_bg"
-        android:padding="12dp"
-        >
-        <TextView
+        android:orientation="vertical">
+
+        <!--En tete-->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="MedTub"
-            android:textColor="#fafafa"
-            android:textSize="30sp"
-            />
-        <TextView
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:background="@drawable/background">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/logo"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="MedTub"
+                android:textSize="15sp"
+                android:textColor="#00c78c"
+                android:fontFamily="sans-serif"
+                android:textStyle="bold"/>
+
+
+        </LinearLayout>
+
+        <!--Corps-->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Tous contre la tuberculose ! !"
-            android:textColor="#fafafa"
-            android:textSize="15sp"
-            />
+            android:orientation="vertical"
+            android:background="#E2F8ED"
+            android:padding="15dp">
+
+            <!--Vue affiche et consultation et docteur-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="20dp"
+                android:padding="15dp"
+                android:background="@drawable/bg_arrondi_blanc"
+                android:weightSum="3">
+
+                <!--Affiche-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <!--Texte d'accueil-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Evitons la tuberculose ..."
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:layout_marginBottom="8dp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:text="Suivez les conseils de votre médecin.
+Prenez soin de vous et n'ignorez pas les symptômes.\n
+Faites une consultation rapide maintenant !!"/>
+
+                    <!--Bouton de consultation-->
+                    <TextView
+                        android:id="@+id/consultation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="onClick"
+                        android:text="Consultation rapide"
+                        android:textStyle="italic"
+                        android:textColor="#E2F8ED"
+                        android:textSize="15sp"
+                        android:padding="7dp"
+                        android:clickable="true"
+                        android:background="@drawable/bg_bouton"/>
+                </LinearLayout>
+
+                <!--Image du docteur-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="2">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="180dp"
+                        android:src="@drawable/docteur"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--Symptomes-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:text="Symptômes"
+                    android:textStyle="bold"
+                    android:textSize="16sp"/>
+
+                <!--Bande pour symptomes-->
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="140dp"
+                            android:layout_marginRight="15dp"
+                            android:background="@drawable/maltete"/>
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="140dp"
+                            android:layout_marginRight="15dp"
+                            android:background="@drawable/maldos"/>
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="140dp"
+                            android:layout_marginRight="15dp"
+                            android:background="@drawable/fievre"/>
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="140dp"
+                            android:layout_marginRight="15dp"
+                            android:background="@drawable/nausee"/>
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="140dp"
+                            android:layout_marginRight="15dp"
+                            android:background="@drawable/malventre"/>
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="140dp"
+                            android:layout_marginRight="15dp"
+                            android:background="@drawable/malpoitrine"/>
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="140dp"
+                            android:layout_marginRight="15dp"
+                            android:background="@drawable/toux"/>
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+
+            <!--Gros bouton connexion-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:id="@+id/grosBouton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Connexion"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    android:onClick="onClick"
+                    android:clickable="true"
+                    android:background="@drawable/bg_bouton"
+                    android:padding="25dp"/>
+            </LinearLayout>
+
+            <!--Envoyer sms et appeler-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:weightSum="2"
+                android:padding="20dp"
+                android:layout_marginBottom="20dp">
+
+                <!--Contacter via SMS-->
+                <TextView
+                    android:id="@+id/envoisms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#165d91"
+                    android:clickable="true"
+                    android:drawableRight="@android:drawable/stat_notify_chat"
+                    android:onClick="onClick"
+                    android:padding="8dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="1"
+                    android:textColor="#fff"
+                    android:text="Nous contacter via SMS " />
+
+                <!--Contacter par appel-->
+                <TextView
+                    android:id="@+id/envoiappel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#17bf66"
+                    android:clickable="true"
+                    android:drawableRight="@android:drawable/stat_sys_phone_call"
+                    android:onClick="onClick"
+                    android:padding="8dp"
+                    android:textColor="#fff"
+                    android:text="Nous appeler " />
+            </LinearLayout>
+
+            <!--Statistiques-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:text="Statistiques"
+                    android:textStyle="bold"
+                    android:textSize="16sp"/>
+
+                <!--Image cliquable pour les statistiques-->
+                <ImageView
+                    android:id="@+id/faireStat"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:onClick="onClick"
+                    android:clickable="true"
+                    android:src="@drawable/statistique_epidemie"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--Pied de page-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/background">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginRight="30dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="About dev team:"
+                    android:textStyle="italic"
+                    android:textSize="10sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:layout_marginBottom="2dp"
+                    android:text="Kenmeugne Loic"
+                    android:textSize="8sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="Kwite Maurice"
+                    android:textSize="8sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="Adala Roger"
+                    android:textSize="8sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="Mahamat Dorsouma"
+                    android:textSize="8sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="Mail"
+                    android:textStyle="italic"
+                    android:textSize="10sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:layout_marginBottom="2dp"
+                    android:text="pcgroupe1@gmail.com"
+                    android:textSize="8sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="kwitejunior@gmail.com"
+                    android:textSize="8sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="rogerbertrand360@gmail.com"
+                    android:textSize="8sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="."
+                    android:textSize="8sp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
     </LinearLayout>
 
-
-    <!--Creation de la grille-->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="6"
-        android:orientation="vertical"
-        android:weightSum="3"
-        android:padding="10dp"
-        >
-
-        <!--La première ligne-->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:weightSum="2"
-            android:padding="10dp"
-            >
-            <!--1er element premiere ligne-->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardform"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                app:cardElevation="2dp"
-                app:cardCornerRadius="8dp"
-                android:layout_margin="12dp"
-                android:background="#fff"
-                >
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    >
-                    <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:src="@drawable/ic_baseline_house_24"
-                        />
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:text="Accueil"
-                        android:textAlignment="center"
-                        />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <!--2e element premiere ligne-->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardsms"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                app:cardElevation="2dp"
-                app:cardCornerRadius="8dp"
-                android:layout_margin="12dp"
-                android:background="#fff"
-                >
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    >
-                    <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:src="@drawable/ic_baseline_sms_24"
-                        />
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:text="Envoi sms"
-                        android:textAlignment="center"
-                        />
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-        </LinearLayout>
-
-        <!--La deuxième ligne-->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:weightSum="2"
-            android:padding="10dp"
-            >
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardcamera"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                app:cardElevation="2dp"
-                app:cardCornerRadius="8dp"
-                android:layout_margin="12dp"
-                android:background="#fff"                >
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    >
-                    <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:src="@drawable/ic_baseline_videocam_24"
-                        />
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:text="Camera"
-                        android:textAlignment="center"
-                        />
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardson"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                app:cardElevation="2dp"
-                app:cardCornerRadius="8dp"
-                android:layout_margin="12dp"
-                android:background="#fff"                >
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    >
-                    <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:src="@drawable/ic_baseline_mic_24"
-                        />
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:text="Enreg vocal"
-                        android:textAlignment="center"
-                        />
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-        </LinearLayout>
-
-        <!--La troisième ligne-->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:weightSum="2"
-            android:padding="10dp"
-            >
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardgps"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                app:cardElevation="2dp"
-                app:cardCornerRadius="8dp"
-                android:layout_margin="12dp"
-                android:background="#fff"                >
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    >
-                    <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:src="@drawable/ic_baseline_place_24"
-                        />
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:text="Position"
-                        android:textAlignment="center"
-                        />
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardstat"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                app:cardElevation="2dp"
-                app:cardCornerRadius="8dp"
-                android:layout_margin="12dp"
-                android:background="#fff"                >
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    >
-                    <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:src="@drawable/ic_baseline_assessment_24"
-                        />
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:text="Statistiques"
-                        android:textAlignment="center"
-                        />
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-        </LinearLayout>
-
-
-    </LinearLayout>
-
-</LinearLayout>
+</ScrollView>

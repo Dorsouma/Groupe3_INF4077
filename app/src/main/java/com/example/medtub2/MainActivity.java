@@ -6,29 +6,30 @@ import androidx.cardview.widget.CardView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    public CardView card1, card2, card3, card4, card5, card6;
+    public TextView card1, card2, card3, card4;
+    public ImageView card5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        card1 = (CardView) findViewById(R.id.cardform);
-        card2 = (CardView) findViewById(R.id.cardsms);
-        card3 = (CardView) findViewById(R.id.cardcamera);
-        card4 = (CardView) findViewById(R.id.cardson);
-        card5 = (CardView) findViewById(R.id.cardgps);
-        card6 = (CardView) findViewById(R.id.cardstat);
+         card1 = (TextView) findViewById(R.id.consultation);
+        card2 = (TextView) findViewById(R.id.grosBouton);
+        card3 = (TextView) findViewById(R.id.envoisms);
+        card4 = (TextView) findViewById(R.id.envoiappel);
+        card5 = (ImageView) findViewById(R.id.faireStat);
 
         card1.setOnClickListener(this);
         card2.setOnClickListener(this);
         card3.setOnClickListener(this);
         card4.setOnClickListener(this);
         card5.setOnClickListener(this);
-        card6.setOnClickListener(this);
     }
 
     @Override
@@ -36,32 +37,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Intent i;
 
         switch (v.getId()) {
-            case R.id.cardform :
+            case R.id.consultation :
+                i = new Intent(this,exam2.class);
+                startActivity(i);
+                break;
+
+            case R.id.grosBouton :
                 i = new Intent(this,form.class);
                 startActivity(i);
                 break;
 
-            case R.id.cardsms :
+            case R.id.envoisms :
                 i = new Intent(this,sms.class);
                 startActivity(i);
                 break;
 
-            case R.id.cardcamera :
-                i = new Intent(this,camera.class);
+            case R.id.envoiappel :
+                i = new Intent(this,contac2.class);
                 startActivity(i);
                 break;
 
-            case R.id.cardson :
-                i = new Intent(this,son.class);
-                startActivity(i);
-                break;
-
-            case R.id.cardgps :
-                i = new Intent(this,gps.class);
-                startActivity(i);
-                break;
-
-            case R.id.cardstat :
+            case R.id.faireStat :
                 i = new Intent(this,stat.class);
                 startActivity(i);
                 break;

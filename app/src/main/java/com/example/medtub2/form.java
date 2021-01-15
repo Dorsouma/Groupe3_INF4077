@@ -9,7 +9,7 @@ import android.view.View;
 
 public class form extends AppCompatActivity implements View.OnClickListener{
 
-    public CardView card1, card2, card3, card4;
+    public CardView card1, card2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,13 +18,9 @@ public class form extends AppCompatActivity implements View.OnClickListener{
 
         card1 = (CardView) findViewById(R.id.cardsign2);
         card2 = (CardView) findViewById(R.id.cardlog2);
-        card3 = (CardView) findViewById(R.id.cardexam2);
-        card4 = (CardView) findViewById(R.id.cardcontac2);
 
         card1.setOnClickListener(this);
         card2.setOnClickListener(this);
-        card3.setOnClickListener(this);
-        card4.setOnClickListener(this);
     }
 
     @Override
@@ -39,16 +35,6 @@ public class form extends AppCompatActivity implements View.OnClickListener{
 
             case R.id.cardlog2 :
                 i = new Intent(this,log2.class);
-                startActivity(i);
-                break;
-
-            case R.id.cardexam2 :
-                i = new Intent(this,exam2.class);
-                startActivity(i);
-                break;
-
-            case R.id.cardcontac2 :
-                i = new Intent(this,contac2.class);
                 startActivity(i);
                 break;
         }
