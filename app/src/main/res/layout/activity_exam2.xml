@@ -46,7 +46,7 @@
             android:gravity="center"
             android:padding="5dp">
 
-            <!--Question-->
+            <!--Question 1-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -58,7 +58,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Toussez vous régulièrement ?"/>
+                    android:layout_marginTop="15dp"
+                    android:text="1- Toussez vous régulièrement ?"/>
                 <RadioGroup
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -68,6 +69,8 @@
                         android:layout_height="wrap_content"
                         android:text="Oui"/>
                     <RadioButton
+                        android:id="@+id/oui1"
+                        android:onClick="onClickRadio"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:shadowColor="#168e74"/>
@@ -83,7 +86,7 @@
                 </RadioGroup>
             </LinearLayout>
 
-            <!--Question-->
+            <!--Question 2-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -95,7 +98,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Avez vous des douleurs au thorax ?"/>
+                    android:layout_marginTop="15dp"
+                    android:text="2- Avez vous des douleurs au thorax ?"/>
                 <RadioGroup
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -105,6 +109,8 @@
                         android:layout_height="wrap_content"
                         android:text="Oui"/>
                     <RadioButton
+                        android:id="@+id/oui2"
+                        android:onClick="onClickRadio"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:shadowColor="#168e74"/>
@@ -120,7 +126,7 @@
                 </RadioGroup>
             </LinearLayout>
 
-            <!--Question-->
+            <!--Question 3-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -132,7 +138,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Avez vous mal aux articulations ?"/>
+                    android:layout_marginTop="15dp"
+                    android:text="3- Avez vous mal aux articulations ?"/>
                 <RadioGroup
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -142,6 +149,8 @@
                         android:layout_height="wrap_content"
                         android:text="Oui"/>
                     <RadioButton
+                        android:id="@+id/oui3"
+                        android:onClick="onClickRadio"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:shadowColor="#168e74"/>
@@ -157,7 +166,7 @@
                 </RadioGroup>
             </LinearLayout>
 
-            <!--Question-->
+            <!--Question 4-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -169,7 +178,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Effectuez vous des crachats de façon continue ?"/>
+                    android:layout_marginTop="15dp"
+                    android:text="4- Effectuez vous des crachats de façon continue ?"/>
                 <RadioGroup
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -179,6 +189,8 @@
                         android:layout_height="wrap_content"
                         android:text="Oui"/>
                     <RadioButton
+                        android:id="@+id/oui4"
+                        android:onClick="onClickRadio"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:shadowColor="#168e74"/>
@@ -194,7 +206,7 @@
                 </RadioGroup>
             </LinearLayout>
 
-            <!--Question-->
+            <!--Question 5-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -206,7 +218,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Etes vous constamment essouflé(e)s ?"/>
+                    android:layout_marginTop="15dp"
+                    android:text="5- Etes vous constamment essouflé(e)s ?"/>
                 <RadioGroup
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -216,6 +229,8 @@
                         android:layout_height="wrap_content"
                         android:text="Oui"/>
                     <RadioButton
+                        android:id="@+id/oui5"
+                        android:onClick="onClickRadio"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:shadowColor="#168e74"/>
@@ -231,7 +246,7 @@
                 </RadioGroup>
             </LinearLayout>
 
-            <!--Question-->
+            <!--Question 6-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -243,7 +258,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Avez vous des difficultés respiratoires ?"/>
+                    android:layout_marginTop="15dp"
+                    android:text="6- Avez vous des difficultés respiratoires ?"/>
                 <RadioGroup
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -253,6 +269,8 @@
                         android:layout_height="wrap_content"
                         android:text="Oui"/>
                     <RadioButton
+                        android:id="@+id/oui6"
+                        android:onClick="onClickRadio"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:shadowColor="#168e74"/>
@@ -268,7 +286,7 @@
                 </RadioGroup>
             </LinearLayout>
 
-            <!--Question-->
+            <!--Question 7-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -280,7 +298,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Etes vous constamment en fièvre ?"/>
+                    android:layout_marginTop="15dp"
+                    android:text="7- Etes vous constamment en fièvre ?"/>
                 <RadioGroup
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -290,6 +309,8 @@
                         android:layout_height="wrap_content"
                         android:text="Oui"/>
                     <RadioButton
+                        android:id="@+id/oui7"
+                        android:onClick="onClickRadio"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:shadowColor="#168e74"/>
@@ -333,7 +354,7 @@
                 android:id="@+id/consultation"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="onClick2"
+                android:onClick="onClick"
                 android:text="Se faire consulter"
                 android:gravity="center"
                 android:textStyle="italic"

@@ -5,13 +5,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="center"
+    android:padding="20dp"
     tools:context=".son">
 
     <TextView
-        android:text="RECORD AREA"
-        android:textSize="24sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Vous pouvez effectuer ici des enregistrements sonores"
+        android:textSize="18sp"/>
+
+    <TextView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:drawableLeft="@android:drawable/ic_btn_speak_now"
+        android:text=" RECORD AREA"
+        android:textSize="24sp" />
 
     <Button
         android:id="@+id/btnStartRecord"
@@ -27,10 +38,12 @@
 
 
     <TextView
-        android:text="PLAY AREA"
-        android:textSize="24sp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:drawableLeft="@android:drawable/ic_media_play"
+        android:text=" PLAY AREA"
+        android:textSize="24sp" />
 
     <Button
         android:id="@+id/btnPlay"

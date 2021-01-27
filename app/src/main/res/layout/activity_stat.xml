@@ -1,16 +1,758 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".stat">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Statistiques"
-        tools:layout_editor_absoluteX="187dp"
-        tools:layout_editor_absoluteY="328dp" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:orientation="vertical">
+
+        <!--En tete-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:background="@drawable/background">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/logo"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="MedTub"
+                android:textSize="15sp"
+                android:textColor="#00c78c"
+                android:fontFamily="sans-serif"
+                android:textStyle="bold"/>
+
+
+        </LinearLayout>
+
+        <!--Statistiques-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:id="@+id/ville_txt1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Région"
+                        android:textColor="#000"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/malades_txt1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="3dp"
+                        android:layout_marginLeft="3dp"
+                        android:drawableLeft="@android:drawable/ic_input_add"
+                        android:text="Malades"
+                        android:textColor="#ECC34B"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/ville_txt1"
+                        app:layout_constraintTop_toTopOf="@+id/ville_txt1" />
+
+                    <TextView
+                        android:id="@+id/gueris_txt1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginLeft="7dp"
+                        android:drawableLeft="@android:drawable/checkbox_on_background"
+                        android:text="Guéris"
+                        android:textColor="#0DB307"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/malades_txt1"
+                        app:layout_constraintTop_toTopOf="@+id/malades_txt1" />
+
+                    <TextView
+                        android:id="@+id/deces_txt1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="3dp"
+                        android:layout_marginLeft="3dp"
+                        android:drawableLeft="@android:drawable/ic_delete"
+                        android:text="Décès"
+                        android:textColor="#DC2642"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toEndOf="@+id/gueris_txt1"
+                        app:layout_constraintTop_toTopOf="@+id/gueris_txt1" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:id="@+id/ville_txt2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Adamaoua"
+                        android:textColor="#000"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/malades_txt2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:drawableLeft="@android:drawable/ic_input_add"
+                        android:text="2000"
+                        android:textColor="#ECC34B"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toEndOf="@+id/ville_txt2"
+                        app:layout_constraintTop_toTopOf="@+id/ville_txt2" />
+
+                    <TextView
+                        android:id="@+id/gueris_txt2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:drawableLeft="@android:drawable/checkbox_on_background"
+                        android:text="400"
+                        android:textColor="#0DB307"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toEndOf="@+id/malades_txt2"
+                        app:layout_constraintTop_toTopOf="@+id/malades_txt2" />
+
+                    <TextView
+                        android:id="@+id/deces_txt2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:drawableLeft="@android:drawable/ic_delete"
+                        android:text="47"
+                        android:textColor="#DC2642"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toEndOf="@+id/gueris_txt2"
+                        app:layout_constraintTop_toTopOf="@+id/gueris_txt2" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:id="@+id/ville_txt3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Centre"
+                        android:textColor="#000"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/malades_txt3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:drawableLeft="@android:drawable/ic_input_add"
+                        android:text="8362"
+                        android:textColor="#ECC34B"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toEndOf="@+id/ville_txt3"
+                        app:layout_constraintTop_toTopOf="@+id/ville_txt3" />
+
+                    <TextView
+                        android:id="@+id/gueris_txt3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:drawableLeft="@android:drawable/checkbox_on_background"
+                        android:text="2589"
+                        android:textColor="#0DB307"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toEndOf="@+id/malades_txt3"
+                        app:layout_constraintTop_toTopOf="@+id/malades_txt3" />
+
+                    <TextView
+                        android:id="@+id/deces_txt3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:drawableLeft="@android:drawable/ic_delete"
+                        android:text="306"
+                        android:textColor="#DC2642"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toEndOf="@+id/gueris_txt3"
+                        app:layout_constraintTop_toTopOf="@+id/gueris_txt3" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:id="@+id/ville_txt4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Est"
+                        android:textColor="#000"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/malades_txt4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:drawableLeft="@android:drawable/ic_input_add"
+                        android:text="1255"
+                        android:textColor="#ECC34B"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toEndOf="@+id/ville_txt4"
+                        app:layout_constraintTop_toTopOf="@+id/ville_txt4" />
+
+                    <TextView
+                        android:id="@+id/gueris_txt4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:drawableLeft="@android:drawable/checkbox_on_background"
+                        android:text="514"
+                        android:textColor="#0DB307"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toEndOf="@+id/malades_txt4"
+                        app:layout_constraintTop_toTopOf="@+id/malades_txt4" />
+
+                    <TextView
+                        android:id="@+id/deces_txt4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:drawableLeft="@android:drawable/ic_delete"
+                        android:text="23"
+                        android:textColor="#DC2642"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toEndOf="@+id/gueris_txt4"
+                        app:layout_constraintTop_toTopOf="@+id/gueris_txt4" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:id="@+id/ville_txt5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ex. Nord"
+                        android:textColor="#000"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/malades_txt5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:drawableLeft="@android:drawable/ic_input_add"
+                        android:text="6495"
+                        android:textColor="#ECC34B"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toEndOf="@+id/ville_txt5"
+                        app:layout_constraintTop_toTopOf="@+id/ville_txt5" />
+
+                    <TextView
+                        android:id="@+id/gueris_txt5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:drawableLeft="@android:drawable/checkbox_on_background"
+                        android:text="2276"
+                        android:textColor="#0DB307"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toEndOf="@+id/malades_txt5"
+                        app:layout_constraintTop_toTopOf="@+id/malades_txt5" />
+
+                    <TextView
+                        android:id="@+id/deces_txt5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:drawableLeft="@android:drawable/ic_delete"
+                        android:text="237"
+                        android:textColor="#DC2642"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toEndOf="@+id/gueris_txt5"
+                        app:layout_constraintTop_toTopOf="@+id/gueris_txt5" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:id="@+id/ville_txt6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Littoral"
+                        android:textColor="#000"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/malades_txt6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:drawableLeft="@android:drawable/ic_input_add"
+                        android:text="12541"
+                        android:textColor="#ECC34B"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toEndOf="@+id/ville_txt6"
+                        app:layout_constraintTop_toTopOf="@+id/ville_txt6" />
+
+                    <TextView
+                        android:id="@+id/gueris_txt6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:drawableLeft="@android:drawable/checkbox_on_background"
+                        android:text="5789"
+                        android:textColor="#0DB307"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toEndOf="@+id/malades_txt6"
+                        app:layout_constraintTop_toTopOf="@+id/malades_txt6" />
+
+                    <TextView
+                        android:id="@+id/deces_txt6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:drawableLeft="@android:drawable/ic_delete"
+                        android:text="734"
+                        android:textColor="#DC2642"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toEndOf="@+id/gueris_txt6"
+                        app:layout_constraintTop_toTopOf="@+id/gueris_txt6" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:id="@+id/ville_txt7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nord"
+                        android:textColor="#000"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/malades_txt7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:drawableLeft="@android:drawable/ic_input_add"
+                        android:text="1728"
+                        android:textColor="#ECC34B"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toEndOf="@+id/ville_txt7"
+                        app:layout_constraintTop_toTopOf="@+id/ville_txt7" />
+
+                    <TextView
+                        android:id="@+id/gueris_txt7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:drawableLeft="@android:drawable/checkbox_on_background"
+                        android:text="679"
+                        android:textColor="#0DB307"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toEndOf="@+id/malades_txt7"
+                        app:layout_constraintTop_toTopOf="@+id/malades_txt7" />
+
+                    <TextView
+                        android:id="@+id/deces_txt7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:drawableLeft="@android:drawable/ic_delete"
+                        android:text="157"
+                        android:textColor="#DC2642"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toEndOf="@+id/gueris_txt7"
+                        app:layout_constraintTop_toTopOf="@+id/gueris_txt7" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:id="@+id/ville_txt8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ouest"
+                        android:textColor="#000"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/malades_txt8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:drawableLeft="@android:drawable/ic_input_add"
+                        android:text="6847"
+                        android:textColor="#ECC34B"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toEndOf="@+id/ville_txt8"
+                        app:layout_constraintTop_toTopOf="@+id/ville_txt8" />
+
+                    <TextView
+                        android:id="@+id/gueris_txt8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:drawableLeft="@android:drawable/checkbox_on_background"
+                        android:text="2545"
+                        android:textColor="#0DB307"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toEndOf="@+id/malades_txt8"
+                        app:layout_constraintTop_toTopOf="@+id/malades_txt8" />
+
+                    <TextView
+                        android:id="@+id/deces_txt8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:drawableLeft="@android:drawable/ic_delete"
+                        android:text="118"
+                        android:textColor="#DC2642"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toEndOf="@+id/gueris_txt8"
+                        app:layout_constraintTop_toTopOf="@+id/gueris_txt8" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:id="@+id/ville_txt9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sud"
+                        android:textColor="#000"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/malades_txt9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:drawableLeft="@android:drawable/ic_input_add"
+                        android:text="2173"
+                        android:textColor="#ECC34B"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toEndOf="@+id/ville_txt9"
+                        app:layout_constraintTop_toTopOf="@+id/ville_txt9" />
+
+                    <TextView
+                        android:id="@+id/gueris_txt9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:drawableLeft="@android:drawable/checkbox_on_background"
+                        android:text="491"
+                        android:textColor="#0DB307"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toEndOf="@+id/malades_txt9"
+                        app:layout_constraintTop_toTopOf="@+id/malades_txt9" />
+
+                    <TextView
+                        android:id="@+id/deces_txt9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:drawableLeft="@android:drawable/ic_delete"
+                        android:text="64"
+                        android:textColor="#DC2642"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toEndOf="@+id/gueris_txt9"
+                        app:layout_constraintTop_toTopOf="@+id/gueris_txt9" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:id="@+id/ville_txt10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nord-Ouest"
+                        android:textColor="#000"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/malades_txt10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:drawableLeft="@android:drawable/ic_input_add"
+                        android:text="1489"
+                        android:textColor="#ECC34B"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toEndOf="@+id/ville_txt10"
+                        app:layout_constraintTop_toTopOf="@+id/ville_txt10" />
+
+                    <TextView
+                        android:id="@+id/gueris_txt10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:drawableLeft="@android:drawable/checkbox_on_background"
+                        android:text="726"
+                        android:textColor="#0DB307"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toEndOf="@+id/malades_txt10"
+                        app:layout_constraintTop_toTopOf="@+id/malades_txt10" />
+
+                    <TextView
+                        android:id="@+id/deces_txt10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:drawableLeft="@android:drawable/ic_delete"
+                        android:text="82"
+                        android:textColor="#DC2642"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toEndOf="@+id/gueris_txt10"
+                        app:layout_constraintTop_toTopOf="@+id/gueris_txt10" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:id="@+id/ville_txt11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sud-Ouest"
+                        android:textColor="#000"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/malades_txt11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:drawableLeft="@android:drawable/ic_input_add"
+                        android:text="789"
+                        android:textColor="#ECC34B"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toEndOf="@+id/ville_txt11"
+                        app:layout_constraintTop_toTopOf="@+id/ville_txt11" />
+
+                    <TextView
+                        android:id="@+id/gueris_txt11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:drawableLeft="@android:drawable/checkbox_on_background"
+                        android:text="265"
+                        android:textColor="#0DB307"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toEndOf="@+id/malades_txt11"
+                        app:layout_constraintTop_toTopOf="@+id/malades_txt11" />
+
+                    <TextView
+                        android:id="@+id/deces_txt11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:drawableLeft="@android:drawable/ic_delete"
+                        android:text="57"
+                        android:textColor="#DC2642"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toEndOf="@+id/gueris_txt11"
+                        app:layout_constraintTop_toTopOf="@+id/gueris_txt11" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</ScrollView>

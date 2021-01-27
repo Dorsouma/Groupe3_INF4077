@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -63,12 +63,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"
-                android:drawableLeft="@android:drawable/ic_dialog_email"
+                android:drawableLeft="@android:drawable/sym_action_email"
                 android:gravity="center"
-                android:hint="medtub21@gmail.com"
-                android:textSize="20sp"
+                android:hint="medtub@gmail.com"
                 android:inputType="textEmailAddress"
-                android:padding="10dp" />
+                android:padding="10dp"
+                android:textSize="18sp" />
 
             <EditText
                 android:id="@+id/PersonPassword"
@@ -77,10 +77,21 @@
                 android:layout_marginBottom="15dp"
                 android:drawableLeft="@android:drawable/ic_lock_idle_lock"
                 android:gravity="center"
-                android:textSize="20sp"
-                android:hint="............."
+                android:textSize="18sp"
+                android:hint="Mot de passe"
                 android:inputType="textPassword"
                 android:padding="10dp" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Veuillez remplir votre adresse e-mail et votre mot de passe"
+                android:gravity="center"
+                android:layout_marginBottom="15dp"
+                android:textSize="14sp"
+                android:textStyle="italic"
+                android:padding="10dp"/>
 
             <TextView
                 android:id="@+id/inscription"
@@ -184,4 +195,4 @@
 
         </LinearLayout>
     </LinearLayout>
-</RelativeLayout>
+</ScrollView>

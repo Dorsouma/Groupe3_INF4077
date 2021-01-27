@@ -73,5 +73,7 @@ public class contac2 extends AppCompatActivity {
     }
 
     public void onClick3(View view) {
+        Intent intent = new Intent(contac2.this, contac2.class);
+        startActivity(intent);
     }
 }

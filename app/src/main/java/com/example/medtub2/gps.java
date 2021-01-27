@@ -26,7 +26,7 @@ import java.util.Locale;
 
 public class gps extends AppCompatActivity {
     //Initialiser les variables
-    Button btLocation;
+    Button btLocation, btCarte;
     TextView textView1, textView2, textView3, textView4, textView5;
     FusedLocationProviderClient fusedLocationProviderClient;
 
@@ -37,6 +37,7 @@ public class gps extends AppCompatActivity {
 
         //Assigner les variables
         btLocation = findViewById(R.id.bt_location);
+        btCarte = findViewById(R.id.bt_carte);
         textView1 = findViewById(R.id.text_view1);
         textView2 = findViewById(R.id.text_view2);
         textView3 = findViewById(R.id.text_view3);

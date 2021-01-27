@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 public class log2 extends AppCompatActivity {
 
@@ -14,5 +15,6 @@ public class log2 extends AppCompatActivity {
     }
 
     public void onClick(View view) {
+        Toast.makeText(this, "Connexion ...", Toast.LENGTH_SHORT).show();
     }
 }

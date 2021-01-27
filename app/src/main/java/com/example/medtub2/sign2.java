@@ -10,6 +10,7 @@ import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 public class sign2 extends AppCompatActivity {
 
@@ -43,5 +44,6 @@ public class sign2 extends AppCompatActivity {
     }
 
     public void onClick(View view) {
+        Toast.makeText(this, "Inscription ...", Toast.LENGTH_SHORT).show();
     }
 }
